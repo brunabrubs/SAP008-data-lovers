@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [1. Tema do Projeto: Pokémon GO](#1-tema-do-projeto:-pokémon-gO)
+* [1. Tema do Projeto: Pokémon GO](#1-tema-do-projeto: pokémon-go)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Pesquisa com os usuários](#3-pesquisa-com-os-usuários)
 * [4. História de Usuários](#4-histórias-de-usuários)
@@ -108,7 +108,7 @@ Elaboramos protótipos de baixa e alta fidelidade usando a ferramenta FIGMA
 
 ## 9. Resultado final
 
-*link deploy
+https://brunabrubs.github.io/SAP008-data-lovers/
 
 ## 10. Desenvolvedoras
 
