@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [1. Tema do Projeto: Pokémon GO](#1-tema-do-projeto: pokémon-go)
+* [1. Tema do Projeto: Pokémon GO](#1-tema-do-projeto-pokémon-go)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Pesquisa com os usuários](#3-pesquisa-com-os-usuários)
 * [4. História de Usuários](#4-histórias-de-usuários)
@@ -10,7 +10,7 @@
 * [6. Teste com os usuários](#6-teste-com-os-usuários)
 * [7. Desenvolvimento](#7-desenvolvimento)
 * [8. Protótipos](#8-protótipos)
-* [9. Resultado Final](#9-resultado-final)npm 
+* [9. Resultado Final](#9-resultado-final) 
 * [10. Desenvolvedoras](#10-desenvolvedoras)
 
 
