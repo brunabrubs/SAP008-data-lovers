@@ -1,11 +1,50 @@
 import {pokemonAlphabeticalOrder,pokemonShiny,calculationPokemon,multFilterPokemon} from '../src/data.js';
-import data from '../src/data/pokemon/pokemon.js';
 
-let pokemons = data.pokemon;
+let pokemonsDataMock = [
+    {
+    "name": "bulbasaur",
+    "img": "https://www.serebii.net/pokemongo/pokemon/001.png",
+    "pokemon-rarity": "normal",
+    "type": [
+      "grass",
+      "poison"
+    ], 
+    "egg": "2 km"},
+    {
+    "name": "squirtle",
+    "img": "https://www.serebii.net/pokemongo/pokemon/007.png",
+    "pokemon-rarity": "normal",
+    "type": [
+      "water"
+    ], 
+    "egg": "2 km"
+    },
+
+    {
+    "name": "articuno",
+    "img": "https://www.serebii.net/pokemongo/pokemon/144.png",
+    "pokemon-rarity": "legendary",
+    "type": [
+      "ice",
+      "flying"
+    ], 
+    "egg": "not in eggs"
+    },
+
+    {
+    "name": "zubat",
+    "img": "https://www.serebii.net/pokemongo/pokemon/041.png",
+    "pokemon-rarity": "normal",
+    "type": [
+      "poison",
+      "flying"
+    ], 
+    "egg": "2 km"
+  }];
 
 describe('Testing filters', () => {
   it('Must return all water pokemon', () => {
-    const waterPokemons = multFilterPokemon(pokemons,'type','water');
+    const waterPokemons = multFilterPokemon(pokemonsDataMock,'type','water');
     const isTypeWater = waterPokemons.map((item) => { 
       return item.type.includes('water')
     });
@@ -14,7 +53,7 @@ describe('Testing filters', () => {
   });
 
   it('Must return rarity pokemon', () => {
-    const legendaryPokemons = multFilterPokemon(pokemons,'pokemon-rarity','legendary');
+    const legendaryPokemons = multFilterPokemon(pokemonsDataMock,'pokemon-rarity','legendary');
     const isRarity = legendaryPokemons.map((item) => { 
       return item["pokemon-rarity"].includes('legendary')
     });
@@ -24,7 +63,7 @@ describe('Testing filters', () => {
 
   
   it('Must return pokemonByEgg', () => {
-    const pokemonsByEgg = multFilterPokemon(pokemons,'egg','2 km');
+    const pokemonsByEgg = multFilterPokemon(pokemonsDataMock,'egg','2 km');
     const comeFromEggs = pokemonsByEgg.map((item) => { 
       return item.egg.includes('2 km')
     });
@@ -34,7 +73,7 @@ describe('Testing filters', () => {
 
 
   it('Must return pokemonByName', () => {
-    const namedPokemon = multFilterPokemon(pokemons,'name','bulbasaur');
+    const namedPokemon = multFilterPokemon(pokemonsDataMock,'name','bulbasaur');
     const isItFounded = namedPokemon.map((item) => { 
       return item.name === 'bulbasaur';
     });
@@ -46,7 +85,7 @@ describe('Testing filters', () => {
 
     let names = [];
 
-    const ordered = pokemonAlphabeticalOrder(pokemons,'z-a');
+    const ordered = pokemonAlphabeticalOrder(pokemonsDataMock,'z-a');
     ordered.map((item) => { 
       names.push(item.name);
     });
@@ -60,7 +99,7 @@ describe('Testing filters', () => {
 
     let names = [];
 
-    const ordered = pokemonAlphabeticalOrder(pokemons,'a-z');
+    const ordered = pokemonAlphabeticalOrder(pokemonsDataMock,'a-z');
     ordered.map((item) => { 
       names.push(item.name);
     });
@@ -71,7 +110,7 @@ describe('Testing filters', () => {
   });
 
   it('Must return shiny pokemon', () => {
-    const shinys = pokemonShiny(pokemons,"https://www.serebii.net/pokemongo/pokemon/shiny/");
+    const shinys = pokemonShiny(pokemonsDataMock,"https://www.serebii.net/pokemongo/pokemon/shiny/");
     const isShinyImg = shinys.map((item) => { 
       return item.img.includes('/pokemon/shiny/')
     });
@@ -81,10 +120,9 @@ describe('Testing filters', () => {
 
 
   it('Must return pokemon percentage', () => {
-    const pokemonSelected = multFilterPokemon(pokemons,"type","dragon")
-    const calculated = calculationPokemon(pokemons.length,pokemonSelected.length);
-    
-    const isCorrectCalculation = calculated == 1.59;
+    const pokemonSelected = multFilterPokemon(pokemonsDataMock,"type","flying")
+    const calculated = calculationPokemon(pokemonsDataMock.length,pokemonSelected.length);
+    const isCorrectCalculation = calculated == 50.00;
 
     expect(true).toEqual(isCorrectCalculation);
   });

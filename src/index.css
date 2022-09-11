@@ -56,30 +56,6 @@ header {
     border: greenyellow solid 3px;
 }
 
-/* ESTILIZAÇÃO DO button 
-.button-initial button {
-    font-size: 1.2rem;
-    background-color:teal;
-    height: 2.3rem;
-    width: 8.375rem;
-    border-radius: 3.125rem;
-    box-shadow: 3px 3px 3px black;
-}
-
-.button-initial button:hover {
-    background-color:navy;
-}
-
-.button-initial a {
-    text-decoration: none;
-    color:black;
-    padding: 0.625rem 2.813rem;
-}
-
-.button-initial a:hover {
-    color:black;
-}*/
-
 /* ESTILIZAÇÃO DO FOOTER */
 .footer-navigation {
     color:white;
