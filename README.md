@@ -102,6 +102,12 @@ Com base no resultados dos testes e feedbacks dos usuários, inserimos o botão 
 
 Elaboramos protótipos de baixa e alta fidelidade usando a ferramenta FIGMA
 
+##Baixa fidelidade 
+![Prototipo](https://github.com/brunabrubs/SAP008-data-lovers/blob/main/src/imagem/protoDeBaixa.jpeg)
+
+
+##Alta fidelidade
+
 ![Prototipo](https://github.com/Andressaolive/SAP008-data-lovers/blob/main/src/imagem/figma%20smartphone.png)
 
 ![Prototipo](https://github.com/Andressaolive/SAP008-data-lovers/blob/main/src/imagem/figma%20desktop%20duas%20telas.png)
